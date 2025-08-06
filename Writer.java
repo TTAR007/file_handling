@@ -6,10 +6,11 @@ public class Writer {
 
     public static void main(String[] args) {
 
-
+        // File Class
         File fileWriter = new File("FileWriter.txt");
         File bufferedWriter = new File("BufferredWriter.txt");
         
+        // FileWriter
         try (FileWriter w = new FileWriter(fileWriter)) {
             
             w.write("I want to learn Javascript");
@@ -18,6 +19,7 @@ public class Writer {
             System.out.println(e.getMessage());
         }
 
+        // BufferredReader
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(bufferedWriter))) {
 
             bw.write("I want to learn C#");
